@@ -9,15 +9,22 @@
   {
     "objectID": "aboutme.html",
     "href": "aboutme.html",
-    "title": "About me",
+    "title": "About Me",
     "section": "",
-    "text": "Add some text and a figure describing myself.\nFor details, see the instructions."
+    "text": "My name is Katherine Lorusso, and I am a first year Master of Public Health student in Epidemiology. I receieved my Bachelor of Science in Public Health from the University of Mississippi in May 2025.\n\nResearch Interests\nAt the University of Mississippi, I contributed to a geospatial research project examining how accessibility and safety within the built environment relates to Diabetes prevalence across the Deep South.\nI am particularly interested in infectious disease outbreaks and survellience.\n\n\nData Analysis Experience\nLast semester, I took EPID 7500: Intro Coding with R for Public Health with Dr. Winter, so I am familar with R. I am excited to apply the skills I gained in that course and continue to build upon them, while also learning to use other platforms.\n\n\nGoal for MADA\nMy main goal for this course is to gain confidence in data analysis. Although I have some prior experience, I want to sharpen all the skills I have learned to feel more comfortable and confident analyzing data and working on projects.\n\n\nData Analysis Website\nWhile at the University of Mississippi, I worked frequently on PolicyMap, which is an interactive data visualization website used to analyze community data related to demographics, health conditions, insurance coverage, and more. My favorite part about this platform is how interactive it. Users can explore different types of data, hover over counties to compare them, and download the datasets for further analysis.\n\n\nFun Facts!\n\nI’m from New Orleans, Louisiana\nI have slightly different colored eyes (one darker brown, one lighter brown)\nMy family rescued a black lab mix from Lake Oconee\n\n\n\n\nStella"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "My website and data analysis portfolio",
+    "title": "Katherine Lorusso - Data Analysis Portfolio",
     "section": "",
-    "text": "Feel free to change the text below any way you want 😁!\n\nHello\n\nAnd hello again\nWelcome to my website and data analysis portfolio.\n\nPlease use the Menu Bar above to look around.\nHave fun!"
+    "text": "Hello\nWelcome to my website and data analysis portfolio.\nPlease use the Menu Bar above to look around and learn more about me and my projects."
+  },
+  {
+    "objectID": "aboutme.html#background",
+    "href": "aboutme.html#background",
+    "title": "About me",
+    "section": "Background",
+    "text": "Background\nMy name is Katherine Lorusso, and I am a first year Master of Public Health student in Epidemiology. I receieved my Bachelors of Science in Public Health from the University of Mississippi in May 2025.\n\nResearch Interests\nAt the University of Mississippi, I contributed to a geospatial research project examining how accessibility and safety within the built environment relates to Diabetes prevalence across the Deep South.\nI am particularly interested in infectious disease outbreaks and survellience.\n\n\nData Analysis Experience\nLast semester, I took EPID 7500: Intro Coding with R for Public Health with Dr. Winter, so I am familar with R. I am excited to apply the skills I gained in that course and continue to build upon them, while also learning to use other platforms."
   }
 ]
