@@ -18,7 +18,7 @@ Last semester, I took *EPID 7500: Intro Coding with R for Public Health* with Dr
 My main goal for this course is to gain **confidence in data analysis**. Although I have some prior experience, I want to sharpen all the skills I have learned to feel more comfortable and confident analyzing data and working on projects.  
 
 ### Data Analysis Website 
-While at the University of Mississippi, I worked frequently on [PolicyMap](https://www.policymap.com/), which is an **interactive data visualization website** used to analyze community data related to demographics, health conditions, insurance coverage, and more. My favorite part about this platform is how interactive it. Users can *explore different types of data, hover over  counties to compare them, and download the datasets for further analysis*. 
+While at the University of Mississippi, I worked frequently on [PolicyMap](https://www.policymap.com/), an **interactive data visualization website** used to analyze community data related to demographics, health conditions, insurance coverage, and more. What I enjoy most about this platform are the wide range of tools to make visualization easy. Users can explore different types of data, hover over  counties to compare trends, and download the datasets for further analysis. 
 
 ### Fun Facts!
 * I'm from **New Orleans, Louisiana**
