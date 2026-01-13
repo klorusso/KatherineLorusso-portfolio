@@ -2,10 +2,8 @@
 title: "Katherine Lorusso - Data Analysis Portfolio"
 ---
 
-
 # Hello
 
 Welcome to **my website** and **data analysis portfolio.**
 
-
-Please use the `Menu Bar` above to look around and learn more about me and my projects.  
+Please use the `Menu Bar` above to look around and learn more about me and my projects.
