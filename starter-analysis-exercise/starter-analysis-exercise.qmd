@@ -108,3 +108,92 @@ summary(fit2)
 # significant, and the positive slope indicates there is a positive relationship 
 # between life expectancy and population. 
 ```
+
+This section is contributed by Rebecca Basta.
+
+```{r}
+#The str functions is used to look at observations and variables in the dataset 
+str(movielens)
+
+#Get a summary of data
+summary(movielens)
+
+#Determine the type of object movielens is
+#The class function is a data frame that allows us to look at a class of the dataset
+class(movielens)
+```
+
+```{r}
+#Using the movielens dataset, I've created a new dataframe that will only include comedy movies
+comedy_data <- movielens[grepl("Comedy", movielens$genres), ]
+
+#Check structure and summary of the comedy_data
+str(comedy_data)
+summary(comedy_data)
+```
+
+```{r}
+#Create a dataframe with rating and year
+rating_year <- comedy_data[, c("rating", "year")]
+
+#Create a dataframe with rating and userId
+rating_user <- comedy_data[, c("rating", "userId")]
+
+#Get the structure and summary
+str(rating_year)
+summary(rating_year)
+
+str(rating_user)
+summary(rating_user)
+```
+
+This analysis looks at movies using the movielens dataset on R. The data is first subset to include all movies. Then I created a dataframe to only look at comedy movies, which was used to create two smaller datasets to look at rating with the year of release and rating with user ID. 
+
+```{r}
+# Plot rating vs year
+#Using the plot function to make the plot
+plot(
+    #Using the movie release year column and makes them the x-axis values
+  rating_year$year,
+  #Using the rating column and makes them the y-axis values
+  rating_year$rating,
+  #labels the x-axis movie relase year and the y-axis rating
+  xlab = "Movie Release Year",
+  ylab = "Rating",
+  #Makes the title of the plot movie rating vs release year for comedy
+  main = "Movie Rating vs Release Year for Comedy",
+  pch = 16
+)
+
+# Plot rating vs user ID
+#Using the plot function to make the plot
+plot(
+    #Using the user ID column and makes them the x-axis values
+  rating_user$userId,
+  #Using the rating column and makes them the y-axis values
+  rating_user$rating,
+  #labels the x-axis user ID and the y-axis rating
+  xlab = "User ID",
+  ylab = "Rating",
+   #Makes the title of the plot movie rating vs user ID for comedy
+  main = "Movie Rating vs User ID for Comedy",
+  pch = 16
+)
+```
+
+The first plot shows that there is no positve or negative relationship between movie rating and the year of release. The second plot shows little to no realtionship between user ID and movie rating. 
+
+```{r}
+#Models rating as a function of year
+#lm is used to fit linear models
+lm_year <- lm(rating ~ year, data = rating_year)
+
+#Models rating as a function of user ID
+lm_user <- lm(rating ~ userId, data = rating_user)
+
+#Prints out results for both models
+summary(lm_year)
+summary(lm_user)
+```
+
+The relationship between year of release and rating are not significant, which can be indicated by the very small slope. The relationship between movie rating and user ID is not significant; this can also be shown by the slope.
