@@ -1,0 +1,68 @@
+---
+title: "Data Exercise"
+---
+```{r}
+#load packages needed
+library(dplyr)
+library(purrr)
+library(ggplot2)
+```
+
+```{r}
+#set seed for reproducibility
+set.seed(123)
+#set the number of observations for data set
+n_individuals <-50
+```
+
+```{r}
+#Creating data frame with 5 variables
+measles_data <- data.frame(
+    PatientID=numeric(n_individuals), 
+    Age=numeric(n_individuals), 
+    Gender=character(n_individuals),
+    DosesMMR=numeric(n_individuals), 
+    State=character(n_individuals)
+)
+```
+
+```{r}
+#Patient ID variable numbers 1-50
+measles_data$PatientID <- 1:n_individuals
+
+#Age variable with random number 5-15 years old 
+measles_data$Age <-sample(5:15, n_individuals, replace=TRUE)
+
+#Gender variable with Male or Female
+measles_data$Gender <- purrr::map_chr(sample(c("Male", "Female"), n_individuals, replace = TRUE), as.character)
+
+#DosesMMR variable with 0,1, or 2 doses
+measles_data$DosesMMR <- sample(0:2, n_individuals, replace=TRUE)
+
+#assign each individual a state: South Carolina or Texas
+measles_data$State <- purrr::map_chr(sample(c("Texas", "South Carolina"), n_individuals, replace = TRUE), as.character)
+
+#view the dataframe
+head(measles_data)
+summary(measles_data)
+glimpse(measles_data)
+
+#Create a table to view doses by age
+table(measles_data$DosesMMR, measles_data$Age)
+```
+
+```{r}
+#boxplot showing age by MMR Doses. The average age of those with no doses is the highest, while the aveage age with two doses in the lowest. 
+ggplot(measles_data, aes(x=DosesMMR, y=Age, group=DosesMMR))+
+    geom_boxplot()+
+    labs(title="Age by MMR Doses",
+    x="Doses of MMR",
+    y="Age")
+```
+
+```{r}
+#linear regression model with doses as outcome and age as predictor. 
+model1<-lm(DosesMMR~Age, measles_data)
+summary(model1)
+#For a 1 year age increase, doses decrease by 0.02857. 
+```
